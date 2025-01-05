@@ -15,11 +15,12 @@
 ## 🛠 기술 스택
 
 
-### FRONTEND
+### FRONTEND PART
 
 
 |구분|Skill|
 |------|---|
+|Platform|Android Studio|
 |Language|Java|
 |Networking|Volley|
 |ETC|SharedPreferences|
