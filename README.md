@@ -17,10 +17,7 @@
 ## 🛠 기술 스택
 
 
-<span style="font-size:200%">FRONTEND</span>  
-
-
-<span style="font-size:30%">제가 맡은 파트만 기술했습니다.</span>  
+- Android Part
 
 
 |구분|Skill|
