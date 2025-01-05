@@ -63,9 +63,7 @@
 
 
 ## 📌 서비스 화면
-![1111111111111111](https://github.com/user-attachments/assets/63a1f6eb-19a0-416f-b346-6fccecbdba9c)
 
-![1111111111111111](https://github.com/user-attachments/assets/3c14f3c5-f73e-436a-a989-4f6ad160fe4e)
 
 (시연 영상 - *https://youtube.com/shorts/SlzXLgIpZ40*)
 
@@ -75,10 +73,10 @@
 | ![image1](https://github.com/user-attachments/assets/7daedc76-a8c8-4f0b-8551-5d906a4a3830) | ![image2](https://github.com/user-attachments/assets/12492a51-b15a-4457-b86a-20fcceac3178) |
 |:--------------------------------------------------------:|:--------------------------------------------------------:|
 | **스클래시 화면**                                  | **메인 화면**                                  |
-| ![image3](https://github.com/user-attachments/assets/63a1f6eb-19a0-416f-b346-6fccecbdba9c) | ![image4](https://github.com/user-attachments/assets/7a126a54-4d8e-4705-ada5-eaa9c815c28a) |
+| ![image3](https://github.com/user-attachments/assets/63a1f6eb-19a0-416f-b346-6fccecbdba9c) | ![image4](https://github.com/user-attachments/assets/3c14f3c5-f73e-436a-a989-4f6ad160fe4e) |
 | **직장 추천 결과 화면**                                  | **직장 상세 화면**                                  |
-| ![image5](https://github.com/user-attachments/assets/d9d603ce-10e4-4d49-977c-0eb8badeebd0) | ![image6](https://github.com/user-attachments/assets/8ea4e824-4914-4450-ad4c-ca19fd9c14df) |
-| **게시판 화면**                                  | **정부 정책 게시판 화면**                                  |
+| ![image5](https://github.com/user-attachments/assets/3b989e5d-f8d0-4d4b-bf21-665338ff9774) | ![image6](https://github.com/user-attachments/assets/92b31305-fd48-40d0-8e6a-15c4220b3d7d) |
+| **스크랩 화면**                                  | **게시판 화면**                                  |
 
 </div>
 
