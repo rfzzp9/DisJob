@@ -15,7 +15,7 @@
 ## 🛠 기술 스택
 
 
-### FRONT-END PART
+### - FRONT-END
 
 
 |구분|Skill|
