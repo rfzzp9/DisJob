@@ -29,21 +29,10 @@
 ## 📌 개발 내용
 
 
-- 사용자 인증 및 계정 관리
-    - Firebase Authentication을 사용해 이메일 기반 회원가입/로그인 구현
-- 메인 지도 화면
-    - Kakao Maps API를 활용하여 지도 화면 생성
-    - 지도 이동시 새로운 상권 데이터를 Firebase에서 비동기로 불러와 해당 영역의 점포 마커 표시
-- 점포 상세 정보 화면
-    - 마커 클릭 시 점포의 상세 정보를 Firebase에서 로드해 표시
-- 필터 및 검색 기능
-    - 카테고리 선택에 따라 마커가 실시간으로 변경되도록 구현
-- 데이터 관리
-    - Firebase Realtime Database를 사용하여 상권 및 점포 데이터 관리
-- 커뮤니티 기능
-    - Firebase를 활용해 글쓰기, 댓글 달기, 좋아요 기능 구현
-- UI/UX 개선
-    - Figma로 UI 프로토타입 설계 및 Android XML로 구현
+- Volley 라이브러리를 사용하여 서버와의 통신 구현
+    - 직장 정보, 댓글, 회원 정보, 커뮤니티 등을 요청 및 수신
+- Android XML로 UI 구현
+- 웹뷰로 커뮤니티 화면, 회원가입 화면, 댓글 화면 연결
 
 
 ## 📌 성장 경험
@@ -74,18 +63,20 @@
 
 
 ## 📌 서비스 화면
+![1111111111111111](https://github.com/user-attachments/assets/63a1f6eb-19a0-416f-b346-6fccecbdba9c)
 
+![1111111111111111](https://github.com/user-attachments/assets/3c14f3c5-f73e-436a-a989-4f6ad160fe4e)
 
 (시연 영상 - *https://youtube.com/shorts/SlzXLgIpZ40*)
 
 
 <div align="center">
 
-| ![image1](https://github.com/user-attachments/assets/f99b49be-a73f-471d-8470-2a69ff658e22) | ![image2](https://github.com/user-attachments/assets/6e091da8-0050-4c98-9af3-f310f697a928) |
+| ![image1](https://github.com/user-attachments/assets/7daedc76-a8c8-4f0b-8551-5d906a4a3830) | ![image2](https://github.com/user-attachments/assets/12492a51-b15a-4457-b86a-20fcceac3178) |
 |:--------------------------------------------------------:|:--------------------------------------------------------:|
 | **스클래시 화면**                                  | **메인 화면**                                  |
-| ![image3](https://github.com/user-attachments/assets/6eecc877-3f07-4a90-a840-d81ae274d711) | ![image4](https://github.com/user-attachments/assets/7a126a54-4d8e-4705-ada5-eaa9c815c28a) |
-| **점포 추천 상세 화면**                                  | **스크랩 화면**                                  |
+| ![image3](https://github.com/user-attachments/assets/63a1f6eb-19a0-416f-b346-6fccecbdba9c) | ![image4](https://github.com/user-attachments/assets/7a126a54-4d8e-4705-ada5-eaa9c815c28a) |
+| **직장 추천 결과 화면**                                  | **직장 상세 화면**                                  |
 | ![image5](https://github.com/user-attachments/assets/d9d603ce-10e4-4d49-977c-0eb8badeebd0) | ![image6](https://github.com/user-attachments/assets/8ea4e824-4914-4450-ad4c-ca19fd9c14df) |
 | **게시판 화면**                                  | **정부 정책 게시판 화면**                                  |
 
