@@ -17,12 +17,15 @@
 ## 🛠 기술 스택
 
 
+FRONTEND  제가 맡은 파트만 기술했습니다.
+
+
 |구분|Skill|
 |------|---|
 |Language|Java|
-|Networking|Firebase SDK|
+|Networking|Volley|
 |Design|Figma|
-|ETC|ExecutorService, SharedPreferences|
+|ETC|SharedPreferences|
 
 
 ## 📌 개발 내용
