@@ -65,7 +65,7 @@
 ## 📌 서비스 화면
 
 
-(시연 영상 - *https://youtu.be/9pUhPSlPtVc*)
+(시연 영상 - *https://youtu.be/eFq6gr2U0ZU*)
 
 
 <div align="center">
