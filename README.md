@@ -15,7 +15,7 @@
 ## 🛠 기술 스택
 
 
-### **Android Part**
+### FRONTEND
 
 
 |구분|Skill|
