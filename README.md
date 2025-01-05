@@ -17,10 +17,10 @@
 ## 🛠 기술 스택
 
 
-<span style="font-size:70%">FRONTEND</span>  
+<span style="font-size:100%">FRONTEND</span>  
 
 
-<span style="font-size:50%">제가 맡은 파트만 기술했습니다.</span>  
+<span style="font-size:30%">제가 맡은 파트만 기술했습니다.</span>  
 
 
 |구분|Skill|
