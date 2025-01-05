@@ -15,14 +15,13 @@
 ## 🛠 기술 스택
 
 
-**Android Part**
+### **Android Part**
 
 
 |구분|Skill|
 |------|---|
 |Language|Java|
 |Networking|Volley|
-|Design|Figma|
 |ETC|SharedPreferences|
 
 
