@@ -15,7 +15,7 @@
 ## 🛠 기술 스택
 
 
-### Android Developer
+- FRONT-END
 
 
 |구분|Skill|
