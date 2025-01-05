@@ -15,7 +15,7 @@
 ## 🛠 기술 스택
 
 
-- Android Part
+**Android Part**
 
 
 |구분|Skill|
