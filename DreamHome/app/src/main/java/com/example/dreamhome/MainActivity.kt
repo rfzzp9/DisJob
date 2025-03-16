@@ -62,7 +62,8 @@ fun BottomAppBar() {
             BottomAppBar(backgroundColor = Color(0xFFF9F9F9))
             {
                 Button(
-//                    border = BorderStroke(0.dp, Color(0xFFF9F9F9)),
+                    border = null,
+                    elevation = null,
                     shape = RoundedCornerShape(0.dp),
                     onClick = {},
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFF9F9F9)),
@@ -80,7 +81,8 @@ fun BottomAppBar() {
                     }
                 }
                 Button(
-//                    border = BorderStroke(0.dp, Color(0xFFF9F9F9)),
+                    border = null,
+                    elevation = null,
                     shape = RoundedCornerShape(0.dp),
                     onClick = {},
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFF9F9F9)),
@@ -98,7 +100,8 @@ fun BottomAppBar() {
                     }
                 }
                 Button(
-//                    border = BorderStroke(0.dp, Color(0xFFF9F9F9)),
+                    border = null,
+                    elevation = null,
                     shape = RoundedCornerShape(0.dp),
                     onClick = {},
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFF9F9F9)),
@@ -116,7 +119,8 @@ fun BottomAppBar() {
                     }
                 }
                 Button(
-//                    border = BorderStroke(0.dp, Color(0xFFF9F9F9)),
+                    border = null,
+                    elevation = null,
                     shape = RoundedCornerShape(0.dp),
                     onClick = {},
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFF9F9F9)),
