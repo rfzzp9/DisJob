@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array fruit
 color black
 color purple_200
 color purple_500
@@ -13,9 +14,12 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable like
 drawable marker
+id compose_view
+layout fragment_map
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string hello_blank_fragment
 style Theme.DreamHome
 xml backup_rules
 xml data_extraction_rules

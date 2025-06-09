@@ -3,33 +3,34 @@ package com.example.dreamhouse
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
+
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.focus.FocusRequester.Companion.createRefs
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.fragment.app.FragmentContainerView
 import com.example.dreamhouse.ui.theme.DreamHouseTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,16 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun Greeting(name: String) {
+    BottomAppBarExample()
+    NaverMapScreen()
+    ConstraintLayout() {
+        val (searchEdittext, mapView) = createRefs()
+
     }
 }
 
@@ -133,17 +144,27 @@ fun BottomAppBarExample() {
         }
     ) {}
 
-
 }
 
 @Composable
-fun Greeting(name: String) {
-    BottomAppBarExample()
-    ConstraintLayout() {
-        val (searchEdittext, mapView) = createRefs()
-
-    }
+fun NaverMapScreen() {
+//    AndroidView(
+//        factory = { context ->
+//            MapView(context).apply {
+//                getMapAsync { naverMap ->
+//                    // 기본 카메라 위치 설정 (서울 시청)
+//                    val cameraUpdate = CameraUpdate.scrollTo(LatLng(37.5665, 126.9780))
+//                    naverMap.moveCamera(cameraUpdate)
+//
+//                    // UI 설정 (줌 컨트롤 활성화)
+//                    naverMap.uiSettings.isZoomControlEnabled = true
+//                }
+//            }
+//        },
+//        modifier = Modifier.fillMaxSize()
+//    )
 }
+
 
 @Preview(showBackground = true)
 @Composable

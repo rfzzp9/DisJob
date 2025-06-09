@@ -1,17 +1,19 @@
 package com.example.dreamhome
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,36 +22,62 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.compose.ui.viewinterop.AndroidView
+import androidx.fragment.app.*
 import com.example.dreamhome.ui.theme.DreamHomeTheme
-import com.google.android.gms.maps.model.LatLng
-import com.google.maps.android.compose.GoogleMap
-import com.google.maps.android.compose.Marker
-import com.google.maps.android.compose.MarkerState
-import com.google.maps.android.compose.rememberCameraPositionState
 
-class MainActivity : ComponentActivity() {
+
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DreamHomeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+            BottomAppBar()
+            FragmentContainer(
+                modifier = Modifier.fillMaxSize(),
+                fragmentManager = supportFragmentManager,
+                commit = { add(it, MapFragment())}
+            )
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
 
-    BottomAppBar()
+
+@Composable
+fun FragmentContainer(
+    modifier: Modifier = Modifier,
+    fragmentManager: FragmentManager,
+    commit: FragmentTransaction.(containerId: Int) -> Unit
+) {
+    val containerId = remember { View.generateViewId() }
+    var initialized by remember { mutableStateOf(false) }
+
+    AndroidView(
+        modifier = modifier,
+        factory = { context ->
+            FragmentContainerView(context)
+                .apply { id = containerId }
+        },
+        update = { view ->
+            if (!initialized) {
+                fragmentManager.commit { commit(view.id) }
+                initialized = true
+            } else {
+                fragmentManager.onContainerAvailable(view)
+            }
+        }
+    )
 }
+
+private fun FragmentManager.onContainerAvailable(view: FragmentContainerView) {
+    val method = FragmentManager::class.java.getDeclaredMethod(
+        "onContainerAvailable",
+        FragmentContainerView::class.java
+    )
+    method.isAccessible = true
+    method.invoke(this, view)
+}
+
 
 
 @Composable
@@ -140,43 +168,17 @@ fun BottomAppBar() {
             }
         }
     ) {
-        it
-        MapScreen()
+        Log.e(it.toString(), "str")
     }
 
 }
 
-@Composable
-fun MapScreen() {
-    val context = LocalContext.current
-    val cameraPositionState = rememberCameraPositionState {
-//        position = com.google.android.gms.maps.CameraPosition.fromLatLngZoom(LatLng(0.0, 0.0), 10f)
-    }
-
-    val selectedPosition = remember { mutableStateOf<LatLng?>(null) }
-
-    GoogleMap(
-        modifier = Modifier.fillMaxWidth().height(757.dp),
-        cameraPositionState = cameraPositionState,
-        onMapLongClick = { latLng ->
-            selectedPosition.value = latLng
-            Toast.makeText(context, "Long clicked at: ${latLng.latitude}, ${latLng.longitude}", Toast.LENGTH_SHORT).show()
-        }
-    )
-
-    selectedPosition.value?.let { position ->
-        Marker(
-            state = MarkerState(position = position),
-            title = "Selected Position"
-        )
-    }
-}
 
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     DreamHomeTheme {
-        Greeting("Android")
+
     }
 }
